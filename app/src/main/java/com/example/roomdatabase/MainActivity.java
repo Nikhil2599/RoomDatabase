@@ -18,10 +18,13 @@ public class MainActivity extends AppCompatActivity {
     int mPersonId;
     Intent intent;
     private AppDatabase mDb;
+    private Aquarium myAquarium;
 
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
+        myAquarium = new Aquarium(this.getApplication(),
+                getLifecycle());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
